@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LYCusActionSheet">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQc-CQ-slG">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kz2-V6-ZiG">
+                    <rect key="frame" x="0.0" y="667" width="375" height="250"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="更换头像" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVM-sP-Orm">
+                            <rect key="frame" x="161" y="18" width="52" height="16"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="skJ-Jr-2NT">
+                            <rect key="frame" x="0.0" y="44" width="375" height="206"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="IX7-Tk-aMv"/>
+                        <constraint firstAttribute="bottom" secondItem="skJ-Jr-2NT" secondAttribute="bottom" id="JjQ-ME-BvK"/>
+                        <constraint firstItem="RVM-sP-Orm" firstAttribute="centerX" secondItem="Kz2-V6-ZiG" secondAttribute="centerX" id="Kmt-w6-a8G"/>
+                        <constraint firstAttribute="trailing" secondItem="skJ-Jr-2NT" secondAttribute="trailing" id="gHv-pe-sV8"/>
+                        <constraint firstItem="skJ-Jr-2NT" firstAttribute="leading" secondItem="Kz2-V6-ZiG" secondAttribute="leading" id="nFW-Cr-Zbp"/>
+                        <constraint firstItem="RVM-sP-Orm" firstAttribute="top" secondItem="Kz2-V6-ZiG" secondAttribute="top" constant="18" id="oNh-BT-cpQ"/>
+                        <constraint firstItem="skJ-Jr-2NT" firstAttribute="top" secondItem="RVM-sP-Orm" secondAttribute="bottom" constant="10" id="ugs-ew-Rbh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="cQc-CQ-slG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DzO-YX-vol"/>
+                <constraint firstAttribute="trailing" secondItem="cQc-CQ-slG" secondAttribute="trailing" id="Z5D-k2-45L"/>
+                <constraint firstAttribute="bottom" secondItem="cQc-CQ-slG" secondAttribute="bottom" id="g1T-1e-bCQ"/>
+                <constraint firstItem="Kz2-V6-ZiG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="667" id="g6G-2m-UYb"/>
+                <constraint firstItem="cQc-CQ-slG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ldP-d2-UjP"/>
+                <constraint firstItem="Kz2-V6-ZiG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nRn-9G-bQD"/>
+                <constraint firstAttribute="trailing" secondItem="Kz2-V6-ZiG" secondAttribute="trailing" id="tcB-ZT-POZ"/>
+                <constraint firstAttribute="bottom" secondItem="Kz2-V6-ZiG" secondAttribute="bottom" id="yCz-Hj-4u3"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="yCz-Hj-4u3"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="backView1" destination="Kz2-V6-ZiG" id="cq2-Vl-bAL"/>
+                <outlet property="bottomViewHeight" destination="IX7-Tk-aMv" id="ZCh-eY-ce6"/>
+                <outlet property="tableView" destination="skJ-Jr-2NT" id="yxu-t8-Plf"/>
+                <outlet property="titleLable" destination="RVM-sP-Orm" id="KkI-49-Fwh"/>
+                <outlet property="topHeight1" destination="oNh-BT-cpQ" id="gvF-5p-qUH"/>
+                <outlet property="topHeight2" destination="ugs-ew-Rbh" id="yK0-fr-Ab1"/>
+                <outlet property="topHeight3" destination="g6G-2m-UYb" id="db4-B2-vXT"/>
+            </connections>
+            <point key="canvasLocation" x="228.5" y="322.5"/>
+        </view>
+    </objects>
+</document>

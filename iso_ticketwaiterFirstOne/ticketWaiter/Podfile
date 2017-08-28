@@ -1,0 +1,12 @@
+target 'ticketWaiter' do
+ pod 'AFNetworking'
+ pod 'YYKit'
+ pod 'MJRefresh'
+ pod 'MBProgressHUD'
+ pod 'SVProgressHUD'
+ pod 'Masonry'
+ pod 'SDWebImage'
+ pod 'FDFullscreenPopGesture'
+ pod 'IQKeyboardManager'
+ pod 'UMengAnalytics-NO-IDFA'
+end

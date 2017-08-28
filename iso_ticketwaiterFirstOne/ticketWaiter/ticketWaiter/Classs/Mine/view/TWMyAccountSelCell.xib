@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TWMyAccountSelCell" rowHeight="67" id="KGk-i7-Jjw" customClass="TWMyAccountSelCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7l-C4-Ybr">
+                        <rect key="frame" x="30" y="22.5" width="16" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="7V2-OT-Q9s"/>
+                            <constraint firstAttribute="height" constant="20" id="nXS-uX-N3u"/>
+                        </constraints>
+                        <state key="normal" image="icon_zdxq_n"/>
+                        <state key="selected" image="icon_zdxq_y"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自动续期" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXx-qt-UwF">
+                        <rect key="frame" x="65" y="10.5" width="60" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gS3-xt-Mgv">
+                        <rect key="frame" x="65" y="28.5" width="310" height="10"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="fxV-4g-3EK"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nt-Bk-eMM">
+                        <rect key="frame" x="50" y="66" width="325" height="0.5"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="1vm-aq-bE1"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="到期后从绑定的银行卡扣除下一年的年费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lf0-VF-iYv">
+                        <rect key="frame" x="65" y="38.5" width="252" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lf0-VF-iYv" firstAttribute="leading" secondItem="gS3-xt-Mgv" secondAttribute="leading" id="HLP-HJ-ZFe"/>
+                    <constraint firstItem="8nt-Bk-eMM" firstAttribute="leading" secondItem="gS3-xt-Mgv" secondAttribute="leading" constant="-15" id="I1t-BW-cRV"/>
+                    <constraint firstAttribute="bottom" secondItem="8nt-Bk-eMM" secondAttribute="bottom" id="KIy-dq-N2e"/>
+                    <constraint firstItem="I7l-C4-Ybr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="28" id="MMJ-gA-h5b"/>
+                    <constraint firstAttribute="trailing" secondItem="8nt-Bk-eMM" secondAttribute="trailing" id="MvS-Zd-SJP"/>
+                    <constraint firstItem="gS3-xt-Mgv" firstAttribute="leading" secondItem="dXx-qt-UwF" secondAttribute="leading" id="Nsc-P7-s7m"/>
+                    <constraint firstItem="gS3-xt-Mgv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="SyL-rx-2YQ"/>
+                    <constraint firstItem="lf0-VF-iYv" firstAttribute="top" secondItem="gS3-xt-Mgv" secondAttribute="bottom" id="Y77-BE-QId"/>
+                    <constraint firstItem="8nt-Bk-eMM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="50" id="fgw-Ji-Jgd"/>
+                    <constraint firstAttribute="trailing" secondItem="gS3-xt-Mgv" secondAttribute="trailing" id="gyQ-pY-VHt"/>
+                    <constraint firstItem="I7l-C4-Ybr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mN7-rb-CCR"/>
+                    <constraint firstItem="gS3-xt-Mgv" firstAttribute="top" secondItem="dXx-qt-UwF" secondAttribute="bottom" id="wGP-Ne-373"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomline" destination="8nt-Bk-eMM" id="2fY-fM-1Bw"/>
+                <outlet property="h1" destination="nXS-uX-N3u" id="3My-Ib-Mpn"/>
+                <outlet property="h2" destination="fxV-4g-3EK" id="nvQ-DU-Qhx"/>
+                <outlet property="l1" destination="MMJ-gA-h5b" id="sdO-W5-xWd"/>
+                <outlet property="l2" destination="fgw-Ji-Jgd" id="EqY-yC-vjX"/>
+                <outlet property="l3" destination="I1t-BW-cRV" id="Q6X-Rt-Rmo"/>
+                <outlet property="selBtn" destination="I7l-C4-Ybr" id="qfv-V9-HSW"/>
+                <outlet property="subtitleLable" destination="lf0-VF-iYv" id="mLm-ME-Fee"/>
+                <outlet property="titleLable" destination="dXx-qt-UwF" id="96U-pg-Ind"/>
+                <outlet property="w1" destination="7V2-OT-Q9s" id="9Rq-qq-StB"/>
+            </connections>
+            <point key="canvasLocation" x="261.5" y="253.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_zdxq_n" width="16" height="16"/>
+        <image name="icon_zdxq_y" width="16" height="16"/>
+    </resources>
+</document>

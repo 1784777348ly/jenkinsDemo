@@ -1,0 +1,146 @@
+//
+//  TWPrefixHeader.pch
+//  ticketWaiter
+//
+//  Created by LY on 16/12/22.
+//  Copyright © 2016年 hui10. All rights reserved.
+//
+
+#ifndef TWPrefixHeader_pch
+#define TWPrefixHeader_pch
+
+#import "BaseHeader.h"
+
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+/*********************************计算高度相关***********************************/
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define NAV_BAR_HEIGHT self.navigationController.navigationBar.bounds.size.height
+#define TAB_BAR_HEIGHT self.tabBarController.tabBar.bounds.size.height
+#define TOOL_BAR_HEIGHT self.navigationController.toolbar.frame.size.height
+#define WITH_NAV_FRAME CGRectMake(0, NAV_BAR_HEIGHT+20, SCREEN_WIDTH, SCREEN_HEIGHT-NAV_BAR_HEIGHT-20)
+#define NONE_NAV_FRAME CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)
+#define ScaleY [UIScreen mainScreen].bounds.size.height/667.0f
+#define ScaleX [UIScreen mainScreen].bounds.size.width/375.0f
+
+#define FitValue(value) ((value)/667.0f*[UIScreen mainScreen].bounds.size.height)
+
+/*********************************图片相关**************************************/
+#define ImageNamed(name) [UIImage imageNamed:[NSString stringWithFormat:@"%@",name]]
+/*********************************颜色相关**************************************/
+#define COLOR(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
+#define CLEARCOLOR [UIColor clearColor]
+#define WHITECOLOR [UIColor whiteColor]
+#define UICOLOR(colorname) [UIColor colorname]
+#define HexRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
+// 字体
+#import "BaseFont.h"
+
+
+#define Font(size) [BaseFont baseFont:size]
+#define ThinFont(size) [BaseFont thinFont:size]
+#define BoldFont(size) [BaseFont boldFont:size]
+#define NormalFont(size) [BaseFont normalFont:size]
+#define NormalFontWithNoScale(size) [BaseFont normalFontWithNoScale:size]
+#define BoldFontWithNoScale(size) [BaseFont boldFontWithNoScale:size]
+
+
+
+
+
+// 定义网络访问错误
+#define ECERROR ![responseObject[@"ec"] isEqual:@200]
+#define AuthorERROR [responseObject[@"ec"] isEqual:@1010000002] //授权失败
+
+
+/**系统香关**/
+#define SystemVersion [NSBundle mainBundle].infoDictionary[@"CFBundleShortVersionString"]
+#define IOS_VERSION  [[[UIDevice currentDevice] systemVersion] floatValue]
+#define IOS8 ([UIDevice currentDevice].systemVersion.floatValue >= 8.0)
+#define IS_IPhone6plus (736 == [[UIScreen mainScreen] bounds].size.height ? YES : NO)
+#define BundleId  [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"]
+//#define SystemVersionNotification @"SystemVersionNotification"
+
+
+//NSUserDefaults
+#define UserDefaults [NSUserDefaults standardUserDefaults]
+#define UserDefaultsKey [[NSUserDefaults standardUserDefaults] objectForKey:@"checkversion"]
+#define UserDefaultsKeyisCheck [[[NSUserDefaults standardUserDefaults] objectForKey:@"checkversion"] isEqualToString:SystemVersion]
+
+// 测试用token
+//开发环境token ydTuVT4M0X8D/7qeKu0z+S7FV9mKPKR2xa9KK8TyvF0vg6SrgYuV0xKy2EF8ApDh6rcfQRfnlqMw3Agrp3Cnfg==
+
+//FGta2gNbXWn1q1OSBlCADVsk3r0CUVgC/fHBBwqbAsBUd4kI39PVYnhP8pDYwIK5o7AMA/MQ/FrtD5CX0qwIZA==
+
+#define TOKEN @"FGta2gNbXWn1q1OSBlCADVsk3r0CUVgC/fHBBwqbAsBUd4kI39PVYnhP8pDYwIK5o7AMA/MQ/FrtD5CX0qwIZA=="
+
+//#define LYPhone [UserDefaults objectForKey:@"phone"]
+
+#define LYAccount  [UserDefaults objectForKey:@"account"]
+
+//[UserDefaults objectForKey:@"account"]
+//#define LYTOKEN  @"j0a/g03MlAdkPg9vuYAjkvYb7ooNK01aM+1mTQ5L0VQ+PjG7GtSePIWFuceKgSBkFbD1sBinMABu1A1iXZuvOQ=="
+#define LYTOKEN [UserDefaults objectForKey:@"token"]
+
+//36010000
+//#define MacAddress @"00:22:aa:db:2b:5e"
+
+//88888888 48:7a:da:4e:d4:71
+#define MacAddress @"48:7a:da:4e:d4:71"
+
+//000003
+#define MacAddress3 @"00:22:aa:db:2b:5e"
+
+//0000012172
+#define MacAddress4 @"b8:f8:83:76:92:ef"
+
+
+
+//BOOL whetherHaveNetwork;
+
+
+//#define TOKEN [UserDefaults valueForKey:@"token"]
+#define UID [UserDefaults valueForKey:@"uid"]
+
+//Weaky self
+#define weakifySelf  \
+__weak __typeof(&*self)weakSelf = self;
+
+#define strongifySelf \
+__strong __typeof(&*weakSelf)self = weakSelf;
+
+
+//变化的常量
+
+//inner环境
+#define UMKey @"589c3c2bae1bf8048d000013"
+#define WeChatAppID @"wx3914e658b3db633e"
+#define WeChatAppSecret @"ad53a6c37d66cf766f773c5b1c455934"
+#define QQAppID @"1105979440"
+#define QQAppKey @"2BilbLGknNZKcpB2"
+#define WeiBoAppKey @"703680201"
+#define WeiBoAppSecret @"64de12bf5ca78c505ccdb68b91acbe90"
+//#define UMPushKey @"5791ee5c67e58e4e6f003287"
+#define BaiDUKey  @"eWI4n2CsTN8dAFs1nAFhDGX15Zt8bqOG"
+
+
+//outter环境
+//#define UMKey @"589c3c2bae1bf8048d000013"
+//#define WeChatAppID @"wx6b2814b3c5044ea7"
+//#define WeChatAppSecret @"b98d400d113932befa810e5fb9b8451f"
+//#define QQAppID @"1105979644"
+//#define QQAppKey @"C7hlscKgYTRsuX2t"
+//#define WeiBoAppKey @"3344098928"
+//#define WeiBoAppSecret @"d0fc370c71015708abdcde8b09f3fafb"
+//#define UMPushKey @"5791ee5c67e58e4e6f003287"
+//#define BaiDUKey  @"QeQ7BQhcXOq7pAotbDwrReAegGe97C1T"
+
+
+
+#endif /* TWPrefixHeader_pch */

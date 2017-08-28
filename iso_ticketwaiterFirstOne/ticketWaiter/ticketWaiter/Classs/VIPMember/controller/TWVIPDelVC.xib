@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TWVIPDelVC">
+            <connections>
+                <outlet property="delBtn" destination="Ger-8s-QR1" id="fzO-6c-Dwn"/>
+                <outlet property="h1" destination="AFE-mF-xNg" id="5VP-Pa-2qz"/>
+                <outlet property="h2" destination="yqk-a2-rtH" id="9kV-Ru-NgX"/>
+                <outlet property="l1" destination="ZnY-dV-1nE" id="rSK-nR-DFQ"/>
+                <outlet property="l2" destination="Gq5-Ep-BK1" id="JPe-IO-EHg"/>
+                <outlet property="myTableView" destination="fLE-Ht-gvf" id="Gof-16-x1v"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fLE-Ht-gvf">
+                    <rect key="frame" x="0.0" y="64" width="375" height="503"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qP7-DF-gK4"/>
+                        <outlet property="delegate" destination="-1" id="N4v-Rh-dqQ"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v8P-pj-Qiv">
+                    <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXH-Ab-XNw">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="fhA-Z4-aTF"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ger-8s-QR1">
+                            <rect key="frame" x="28" y="27.5" width="319" height="45"/>
+                            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="yqk-a2-rtH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                            <state key="normal" title="删除"/>
+                            <state key="highlighted" backgroundImage="btn_login_c"/>
+                            <connections>
+                                <action selector="delClick:" destination="-1" eventType="touchUpInside" id="HUw-yB-cHr"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="dXH-Ab-XNw" firstAttribute="top" secondItem="v8P-pj-Qiv" secondAttribute="top" id="Apc-y0-WDI"/>
+                        <constraint firstAttribute="trailing" secondItem="Ger-8s-QR1" secondAttribute="trailing" constant="28" id="Gq5-Ep-BK1"/>
+                        <constraint firstItem="Ger-8s-QR1" firstAttribute="leading" secondItem="v8P-pj-Qiv" secondAttribute="leading" constant="28" id="ZnY-dV-1nE"/>
+                        <constraint firstItem="Ger-8s-QR1" firstAttribute="centerY" secondItem="v8P-pj-Qiv" secondAttribute="centerY" id="btI-UT-gYr"/>
+                        <constraint firstAttribute="trailing" secondItem="dXH-Ab-XNw" secondAttribute="trailing" id="bu9-wD-Bhf"/>
+                        <constraint firstItem="dXH-Ab-XNw" firstAttribute="leading" secondItem="v8P-pj-Qiv" secondAttribute="leading" id="eJK-K8-Fhq"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fLE-Ht-gvf" secondAttribute="bottom" constant="100" id="AFE-mF-xNg"/>
+                <constraint firstAttribute="trailing" secondItem="fLE-Ht-gvf" secondAttribute="trailing" id="GeQ-YJ-FoE"/>
+                <constraint firstItem="fLE-Ht-gvf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H0w-VH-s2D"/>
+                <constraint firstItem="v8P-pj-Qiv" firstAttribute="top" secondItem="fLE-Ht-gvf" secondAttribute="bottom" id="LDd-34-CaC"/>
+                <constraint firstAttribute="trailing" secondItem="v8P-pj-Qiv" secondAttribute="trailing" id="Tbz-q7-Alf"/>
+                <constraint firstAttribute="bottom" secondItem="v8P-pj-Qiv" secondAttribute="bottom" id="bYb-8K-gKD"/>
+                <constraint firstItem="v8P-pj-Qiv" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="m2l-71-rfI"/>
+                <constraint firstItem="fLE-Ht-gvf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="oeq-Af-ked"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_login_c" width="640" height="90"/>
+    </resources>
+</document>

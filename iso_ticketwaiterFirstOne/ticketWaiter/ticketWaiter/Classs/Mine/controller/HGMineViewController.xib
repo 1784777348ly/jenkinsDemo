@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HGMineViewController">
+            <connections>
+                <outlet property="h1" destination="NUU-bo-Cka" id="vSb-TJ-x8M"/>
+                <outlet property="logoutBtn" destination="3VT-yu-Tty" id="x2n-s1-QhP"/>
+                <outlet property="myTableView" destination="RPx-JK-wAp" id="xOQ-UT-wxw"/>
+                <outlet property="t1" destination="eeI-5S-xB1" id="mep-ZB-Xvn"/>
+                <outlet property="t2" destination="nno-xW-R5O" id="xii-ka-4vp"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="w1" destination="rdf-eT-jWm" id="crl-Md-f6h"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="RPx-JK-wAp">
+                    <rect key="frame" x="0.0" y="64" width="375" height="503"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="9fA-d4-srZ"/>
+                        <outlet property="delegate" destination="-1" id="FFw-pN-Pfk"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3VT-yu-Tty">
+                    <rect key="frame" x="28" y="590" width="319" height="45"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.20784313730000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="NUU-bo-Cka"/>
+                        <constraint firstAttribute="width" constant="319" id="rdf-eT-jWm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="退出登录"/>
+                    <state key="highlighted" backgroundImage="btn_login_c"/>
+                    <connections>
+                        <action selector="logoutClick:" destination="-1" eventType="touchUpInside" id="hhK-2b-vQn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="RPx-JK-wAp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4wg-f0-Jl0"/>
+                <constraint firstItem="RPx-JK-wAp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="5ev-YT-fwQ"/>
+                <constraint firstItem="3VT-yu-Tty" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ava-QU-buM"/>
+                <constraint firstAttribute="bottom" secondItem="RPx-JK-wAp" secondAttribute="bottom" constant="100" id="eeI-5S-xB1"/>
+                <constraint firstAttribute="trailing" secondItem="RPx-JK-wAp" secondAttribute="trailing" id="id4-CB-3I6"/>
+                <constraint firstAttribute="bottom" secondItem="3VT-yu-Tty" secondAttribute="bottom" constant="32" id="nno-xW-R5O"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_login_c" width="640" height="90"/>
+    </resources>
+</document>

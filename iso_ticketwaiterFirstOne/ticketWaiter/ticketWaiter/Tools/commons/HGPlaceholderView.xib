@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HGPlaceholderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_noc" translatesAutoresizingMaskIntoConstraints="NO" id="fcf-rd-3Qr">
+                    <rect key="frame" x="141" y="123" width="93" height="123"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="93" id="S1e-sU-NPg"/>
+                        <constraint firstAttribute="height" constant="123" id="oKG-mU-Xov"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网络去哪里了" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wig-Qo-fXm">
+                    <rect key="frame" x="139" y="270" width="96" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请检查您的手机是否联网" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZt-s2-WhT">
+                    <rect key="frame" x="110" y="301" width="154" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWg-lY-aIY">
+                    <rect key="frame" x="28" y="368" width="319" height="45"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.20784313730000001" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Fdn-mM-fil"/>
+                        <constraint firstAttribute="width" constant="319" id="MBu-Rn-zr6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <state key="normal" title="重新加载"/>
+                    <state key="highlighted" backgroundImage="btn_login_c"/>
+                    <connections>
+                        <action selector="clickOn:" destination="iN0-l3-epB" eventType="touchUpInside" id="KIo-zw-oQj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fWg-lY-aIY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2gD-gi-Jxb"/>
+                <constraint firstItem="fcf-rd-3Qr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="123" id="9jG-Nh-IQQ"/>
+                <constraint firstItem="iZt-s2-WhT" firstAttribute="top" secondItem="wig-Qo-fXm" secondAttribute="bottom" constant="12" id="Ks6-7w-cXJ"/>
+                <constraint firstItem="fcf-rd-3Qr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="M0Q-i0-JxO"/>
+                <constraint firstItem="fWg-lY-aIY" firstAttribute="top" secondItem="iZt-s2-WhT" secondAttribute="bottom" constant="50" id="YaN-Q0-Owe"/>
+                <constraint firstItem="wig-Qo-fXm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bHa-pW-kBT"/>
+                <constraint firstItem="iZt-s2-WhT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="dvW-iU-7wl"/>
+                <constraint firstItem="wig-Qo-fXm" firstAttribute="top" secondItem="fcf-rd-3Qr" secondAttribute="bottom" constant="24" id="p5l-G1-obc"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="h1" destination="Fdn-mM-fil" id="ou1-uc-xaR"/>
+                <outlet property="h2" destination="oKG-mU-Xov" id="vtK-oO-7Ci"/>
+                <outlet property="lable1" destination="wig-Qo-fXm" id="L8a-kb-dho"/>
+                <outlet property="lable2" destination="iZt-s2-WhT" id="wK4-OT-t8s"/>
+                <outlet property="placeholderBtn" destination="fWg-lY-aIY" id="6ns-Dc-6H6"/>
+                <outlet property="t1" destination="9jG-Nh-IQQ" id="N9H-Lb-6Yw"/>
+                <outlet property="t2" destination="p5l-G1-obc" id="yqb-34-eX1"/>
+                <outlet property="t3" destination="Ks6-7w-cXJ" id="pTt-Rh-Ewn"/>
+                <outlet property="t4" destination="YaN-Q0-Owe" id="v6u-Ag-Rh4"/>
+                <outlet property="w1" destination="MBu-Rn-zr6" id="bqi-aH-Ywn"/>
+                <outlet property="w2" destination="S1e-sU-NPg" id="Bap-uF-GwJ"/>
+            </connections>
+            <point key="canvasLocation" x="235.5" y="241.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_login_c" width="640" height="90"/>
+        <image name="img_noc" width="93" height="123"/>
+    </resources>
+</document>

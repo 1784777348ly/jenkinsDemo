@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TWHomeViewCell" id="gTV-IL-0wX" customClass="TWHomeViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="187" height="181"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="187" height="181"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_hygl" translatesAutoresizingMaskIntoConstraints="NO" id="TED-6X-LYv">
+                        <rect key="frame" x="60" y="44" width="67" height="67"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="67" id="QCM-He-5Tm"/>
+                            <constraint firstAttribute="height" constant="67" id="oMp-AG-1FO"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="会员管理" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVh-iO-SvF">
+                        <rect key="frame" x="65" y="129" width="56" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234个订单" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4U-3f-LiO">
+                        <rect key="frame" x="64" y="156" width="59.5" height="13.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="TED-6X-LYv" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="5gU-aa-7nl"/>
+                <constraint firstItem="dVh-iO-SvF" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="6cs-Gx-cPz"/>
+                <constraint firstItem="n4U-3f-LiO" firstAttribute="top" secondItem="dVh-iO-SvF" secondAttribute="bottom" constant="10" id="8BE-Ug-EPp"/>
+                <constraint firstItem="dVh-iO-SvF" firstAttribute="top" secondItem="TED-6X-LYv" secondAttribute="bottom" constant="18" id="BpC-ke-2hK"/>
+                <constraint firstItem="n4U-3f-LiO" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="dUJ-WK-vvt"/>
+                <constraint firstItem="TED-6X-LYv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="44" id="qfB-Z6-4hf"/>
+            </constraints>
+            <size key="customSize" width="110" height="86"/>
+            <connections>
+                <outlet property="h1" destination="oMp-AG-1FO" id="dWF-Wy-jiV"/>
+                <outlet property="subtitle" destination="n4U-3f-LiO" id="rX8-tk-AP4"/>
+                <outlet property="t1" destination="qfB-Z6-4hf" id="U8V-Ha-NCZ"/>
+                <outlet property="t2" destination="BpC-ke-2hK" id="4av-bW-91L"/>
+                <outlet property="t3" destination="8BE-Ug-EPp" id="6pF-JF-oec"/>
+                <outlet property="titleImage" destination="TED-6X-LYv" id="C3w-M7-IRi"/>
+                <outlet property="titleLable" destination="dVh-iO-SvF" id="1qb-2K-xqw"/>
+                <outlet property="w1" destination="QCM-He-5Tm" id="hLB-qH-6Xt"/>
+            </connections>
+            <point key="canvasLocation" x="238.5" y="292.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_hygl" width="67" height="67"/>
+    </resources>
+</document>

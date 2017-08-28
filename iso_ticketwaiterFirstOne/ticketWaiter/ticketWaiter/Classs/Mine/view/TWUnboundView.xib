@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TWUnboundView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="268"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1X-zr-fDr">
+                    <rect key="frame" x="0.0" y="156" width="375" height="51"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bza-cD-qS9">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="解除绑定银行卡">
+                                <color key="titleColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="unBoundCard:" destination="iN0-l3-epB" eventType="touchUpInside" id="ccA-sp-Waj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bza-cD-qS9" secondAttribute="trailing" id="5Fb-OH-PEm"/>
+                        <constraint firstItem="bza-cD-qS9" firstAttribute="leading" secondItem="s1X-zr-fDr" secondAttribute="leading" id="GDV-98-wxG"/>
+                        <constraint firstAttribute="bottom" secondItem="bza-cD-qS9" secondAttribute="bottom" id="KLN-QU-ZrZ"/>
+                        <constraint firstItem="bza-cD-qS9" firstAttribute="top" secondItem="s1X-zr-fDr" secondAttribute="top" id="StK-9r-0a2"/>
+                        <constraint firstAttribute="height" constant="51" id="WII-X9-yKK"/>
+                        <constraint firstItem="bza-cD-qS9" firstAttribute="top" secondItem="s1X-zr-fDr" secondAttribute="top" id="vWL-JQ-WoC"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="StK-9r-0a2"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g1Z-mi-bGY">
+                    <rect key="frame" x="0.0" y="217" width="375" height="51"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuH-bA-0yL">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="取消">
+                                <color key="titleColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelClick:" destination="iN0-l3-epB" eventType="touchDown" id="dwH-PV-uaj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="MuH-bA-0yL" firstAttribute="leading" secondItem="g1Z-mi-bGY" secondAttribute="leading" id="P4T-qb-TLD"/>
+                        <constraint firstAttribute="trailing" secondItem="MuH-bA-0yL" secondAttribute="trailing" id="WJS-bx-FbV"/>
+                        <constraint firstItem="MuH-bA-0yL" firstAttribute="top" secondItem="g1Z-mi-bGY" secondAttribute="top" id="iTe-nt-fg6"/>
+                        <constraint firstAttribute="bottom" secondItem="MuH-bA-0yL" secondAttribute="bottom" id="n9b-Cg-U6k"/>
+                        <constraint firstAttribute="height" constant="51" id="tlM-0u-BSI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="s1X-zr-fDr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="1m3-bh-UW4"/>
+                <constraint firstAttribute="bottom" secondItem="g1Z-mi-bGY" secondAttribute="bottom" id="5cs-sq-19i"/>
+                <constraint firstItem="g1Z-mi-bGY" firstAttribute="top" secondItem="s1X-zr-fDr" secondAttribute="bottom" constant="10" id="CcA-i6-ufU"/>
+                <constraint firstItem="g1Z-mi-bGY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NyQ-or-1Lo"/>
+                <constraint firstAttribute="trailing" secondItem="s1X-zr-fDr" secondAttribute="trailing" id="OSj-9e-M5p"/>
+                <constraint firstItem="s1X-zr-fDr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZBE-bo-qTU"/>
+                <constraint firstAttribute="trailing" secondItem="g1Z-mi-bGY" secondAttribute="trailing" id="idm-K1-Jp2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="ZBE-bo-qTU"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="btn1" destination="bza-cD-qS9" id="VEP-bL-jsi"/>
+                <outlet property="btn2" destination="MuH-bA-0yL" id="CH6-JW-xBm"/>
+                <outlet property="h1" destination="WII-X9-yKK" id="fQT-4S-moY"/>
+                <outlet property="h2" destination="tlM-0u-BSI" id="6wM-mP-Huw"/>
+                <outlet property="t1" destination="CcA-i6-ufU" id="omr-7f-7b3"/>
+            </connections>
+            <point key="canvasLocation" x="229.5" y="447"/>
+        </view>
+    </objects>
+</document>

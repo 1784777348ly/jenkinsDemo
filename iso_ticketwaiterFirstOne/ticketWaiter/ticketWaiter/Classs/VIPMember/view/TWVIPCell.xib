@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TWVIPCell" rowHeight="90" id="KGk-i7-Jjw" customClass="TWVIPCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogb-Yw-MDH">
+                        <rect key="frame" x="20" y="34" width="0.0" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" id="3MF-bn-nyc"/>
+                            <constraint firstAttribute="height" constant="22" id="nAV-hR-XJt"/>
+                        </constraints>
+                        <state key="normal" image="icon_tip_n"/>
+                        <state key="selected" image="icon_tip_y"/>
+                        <connections>
+                            <action selector="clickOn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="b2W-k5-P3U"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bd7-3V-yqL">
+                        <rect key="frame" x="35" y="89" width="285" height="0.5"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="irT-uL-mdS"/>
+                            <constraint firstAttribute="height" constant="0.5" id="nP7-fE-Wxg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="irT-uL-mdS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13254678976" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLq-kn-KNc">
+                        <rect key="frame" x="35" y="35" width="102.5" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="103" id="caF-VB-HgJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="林三" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCw-d0-48o">
+                        <rect key="frame" x="166" y="35" width="130" height="19.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="130" id="8p1-fS-3XX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tCw-d0-48o" firstAttribute="leading" secondItem="rLq-kn-KNc" secondAttribute="trailing" id="AgG-4H-BTN"/>
+                    <constraint firstItem="bd7-3V-yqL" firstAttribute="leading" secondItem="ogb-Yw-MDH" secondAttribute="trailing" constant="12" id="Hr8-YL-e80"/>
+                    <constraint firstItem="rLq-kn-KNc" firstAttribute="leading" secondItem="ogb-Yw-MDH" secondAttribute="trailing" constant="15" id="IWT-ft-wTn"/>
+                    <constraint firstItem="bd7-3V-yqL" firstAttribute="leading" secondItem="rLq-kn-KNc" secondAttribute="leading" id="NzW-3C-OzO"/>
+                    <constraint firstItem="rLq-kn-KNc" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PVo-pt-Cb3"/>
+                    <constraint firstItem="ogb-Yw-MDH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="QHl-f6-qMJ"/>
+                    <constraint firstItem="ogb-Yw-MDH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="YXQ-oO-94V"/>
+                    <constraint firstItem="rLq-kn-KNc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Zox-ca-Vko"/>
+                    <constraint firstAttribute="bottom" secondItem="bd7-3V-yqL" secondAttribute="bottom" id="bVR-69-9w9"/>
+                    <constraint firstAttribute="trailing" secondItem="tCw-d0-48o" secondAttribute="trailing" constant="24" id="gvg-V5-GIN"/>
+                    <constraint firstItem="tCw-d0-48o" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="hq7-9c-v9G"/>
+                    <constraint firstAttribute="trailing" secondItem="bd7-3V-yqL" secondAttribute="trailing" id="yRr-pC-yW3"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="Zox-ca-Vko"/>
+                        <exclude reference="Hr8-YL-e80"/>
+                        <exclude reference="AgG-4H-BTN"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="clickBtn" destination="ogb-Yw-MDH" id="sV9-2y-zaI"/>
+                <outlet property="h1" destination="nAV-hR-XJt" id="2v1-80-kJp"/>
+                <outlet property="l1" destination="IWT-ft-wTn" id="lwC-ZA-TIG"/>
+                <outlet property="l2" destination="NzW-3C-OzO" id="rJ4-kn-dXr"/>
+                <outlet property="l3" destination="gvg-V5-GIN" id="h56-vQ-2xj"/>
+                <outlet property="nicknameLable" destination="tCw-d0-48o" id="3Yt-wb-48f"/>
+                <outlet property="phoneLable" destination="rLq-kn-KNc" id="USR-zh-tSJ"/>
+                <outlet property="w1" destination="3MF-bn-nyc" id="j18-Ic-aMp"/>
+                <outlet property="w2" destination="caF-VB-HgJ" id="hea-B8-dSa"/>
+                <outlet property="w3" destination="8p1-fS-3XX" id="Ruj-hd-jbE"/>
+            </connections>
+            <point key="canvasLocation" x="269" y="291"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_tip_n" width="21" height="21"/>
+        <image name="icon_tip_y" width="21" height="21"/>
+    </resources>
+</document>
